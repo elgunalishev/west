@@ -31,6 +31,12 @@ public class ProductController {
         return productService.getProductById(id);
     }
 
+    @GetMapping("/")
+    public Product getHome() {
+        return "OK";
+    }
+
+
     @GetMapping("/productsCategory")
     public List<ProductCategory> getProductsCategory() {
         return productService.findAllProductCategory();
